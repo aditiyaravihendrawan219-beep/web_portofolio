@@ -1,0 +1,457 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+/* --- PERBAIKAN DARK MODE --- */
+
+/* 1. Background dasar halaman & teks umum */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+/* 2. Section Tentang (Menghilangkan kotak aneh & menyelaraskan warna) */
+body.dark-mode .tentang {
+    background-color: transparent; /* Pastikan background section transparan */
+}
+
+body.dark-mode .tentang .box {
+    background-color: transparent; /* Hilangkan kotak putih/gelap kaku di pembungkus teks tentang */
+}
+
+/* 3. Kotak/Card Tols agar serasi di Dark Mode */
+body.dark-mode .tentang {
+    background-color: #0d2b25; /* Hijau tua/emerald gelap yang adem di mata */
+    color: #f1f1f1;
+}
+
+/* Kotak di dalam section tentang tetap rapi dan kontras */
+body.dark-mode .tentang .box {
+    background-color: #163830; /* Hijau gelap medium untuk card-nya */
+    border: 1px solid #1f4d42;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Menyesuaikan warna teks paragraf di dalam box agar nyaman dibaca */
+body.dark-mode .tentang p {
+    color: #d1e8e2;
+}
+
+/* Tombol About Me agar tetap estetik */
+body.dark-mode .tentang .box a {
+    color: #fff;
+    background-color: #00cba9;
+    border: none;
+}
+
+body.dark-mode .tentang .box a:hover {
+    background-color: #00967d;
+}
+/* 4. Kotak/Card Proyek */
+body.dark-mode .proyek .box {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    border: 1px solid #2d2d2d;
+}
+
+/* 5. Warna Teks Paragraf di dalam Box */
+body.dark-mode .tentang p,
+body.dark-mode .proyek p,
+body.dark-mode .tools-desc p {
+    color: #bbb;
+}
+
+/* --- PERBAIKAN NAVBAR & TOMBOL DI DARK MODE --- */
+
+/* 1. Mengubah warna teks menu navbar jadi putih/terang saat dark mode */
+body.dark-mode .navbar-box .menu li a {
+    color: #f1f1f1;
+}
+
+body.dark-mode .navbar-box .menu li a:hover,
+body.dark-mode .active-menu {
+    color: #00cba9; /* Tetap hijau aksen khas kamu saat di-hover atau aktif */
+}
+
+/* 2. Styling tombol toggle dark mode agar kontras dan jelas */
+body.dark-mode .theme-btn {
+    border-color: #00cba9;
+    color: #00cba9;
+    background-color: rgba(0, 203, 169, 0.1);
+}
+
+body.dark-mode .theme-btn:hover {
+    background-color: #00cba9;
+    color: #121212;
+}
+
+
+
+.container {
+    width: 80%;
+    margin-inline: auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* navbar */ 
+.navbar {
+    padding: 30px 0;
+}
+
+.navbar-box {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-box .menu {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.navbar-box .menu li {
+    list-style-type: none;
+}
+
+.navbar-box .menu li a {
+    text-decoration: none;
+    color: black;
+}
+/* navbar */ 
+
+/* hero */
+.hero {
+    margin-block: 70px;
+}
+
+.hero-box {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 70px;
+}
+
+.hero-box img {
+    width: 300px;
+}
+
+.hero-box h1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 1.3;
+}
+
+.hero-box h1 span {
+    font-weight: bold;
+    color: #00cba9;
+}
+
+@media (max-width: 768px) {
+    .hero-box h1 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 475px) {
+    .hero-box h1 {
+        font-size: 40px;
+    }
+}
+/* hero */
+
+header svg {
+    margin-bottom: -10px;
+}
+
+/* Tentang */
+.tentang {
+    background-color: #00cba9;
+    padding-block: 50px;
+    color: white;
+    padding: 60px 0;
+}
+
+.tentang .container > h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+
+.tentang-box .box:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    justify-content: center;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.tentang-box .box:nth-child(1) img {
+    width: 300px;
+    padding: 10px 10px 0px;
+    background-color: #01ffd5;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-inline: auto;
+}
+
+.tentang-box .box:nth-child(1) p {
+    line-height: 2;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.tentang-box .box:nth-child(1) p span {
+    font-weight: bold;
+}
+
+/* mengatur jarak "berikut ini beberapa tols yang biasa di pakai" */
+.tentang-box .box p { 
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.tentang-box .box:nth-child(1) a {
+    border: 1px solid white;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.tentang-box .box:nth-child(1) a:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+/* seting box tools */
+.tentang-box .tools .tools-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    min-height: auto;
+}
+
+.tentang-box .tools .tools-box .tools-desc h3,
+.tentang-box .tools .tools-box .tools-desc p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.tentang-box .tools .tools-box:hover {
+    background-color: white;
+    color: black;
+}
+
+.tentang-box .tools .tools-box img {
+    width: 50px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.tentang-box .tools {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+/* Media Query Responsif HP untuk Bagian Tentang */
+@media (max-width: 992px) {
+    .tentang-box .box:nth-child(1) {
+        flex-direction: column; /* Membuat foto dan teks bertumpuk ke bawah di HP */
+        gap: 30px;
+        text-align: center;
+    }
+
+    .tentang-box .box:nth-child(1) p {
+        text-align: center; /* Merapikan teks agar rata tengah di layar kecil */
+    }
+}
+/* Tentang */
+
+/* proyek */
+.proyek .container > h1,
+.proyek .container > p {
+    text-align: center;
+}
+
+.proyek {
+    padding-block: 50px;    
+}
+
+.svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.proyek-box {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.proyek-box .box {
+    width: 350px;
+    max-width: 100%; /* Mencegah card proyek meluber di layar HP kecil */
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.proyek-box .box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.proyek-desc {
+    padding: 24px;
+}
+
+.proyek-box .proyek-desc p {
+    line-height: 2;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.proyek-box .proyek-desc .proyek-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.proyek-box .proyek-desc .proyek-btn a {
+    background-color: #00cba9;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.proyek-box .proyek-desc .proyek-btn a:hover {
+    background-color: #00d6b2;
+}
+/* proyek */
+
+/* kontak */
+footer {
+    background-color: #00cba9;
+    margin: -10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+footer span {
+    font-weight: bold;
+}
+
+.social {
+    display: flex;
+    gap: 20px;
+}
+
+footer .social a {
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+/* kontak */
+
+/* konsultasi */
+.btn-konsultasi {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #00cba9;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 19px;
+}
+
+.btn-konsultasi:hover {
+    background-color: #00a88e;
+}
+
+.konsultasi-container {
+    text-align: center;
+    margin-top: 50px;
+}
+/* konsultasi */
+
+/* --- CSS TOMBOL SCROLL UP --- */
+.scroll-up {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+}
+
+.scroll-up a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: #00cba9;
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-up a:hover {
+    background-color: #00967d;
+    transform: translateY(-3px);
+}
+
+/* Menyesuaikan tombol scroll up saat Dark Mode Hijau Tua aktif */
+body.dark-mode .scroll-up a {
+    background-color: #112d26;
+    color: #00cba9;
+    border: 1px solid #1a443a;
+}
+
+body.dark-mode .scroll-up a:hover {
+    background-color: #00cba9;
+    color: #0b1f1a;
+}
+
