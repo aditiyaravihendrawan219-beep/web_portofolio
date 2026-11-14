@@ -1,0 +1,519 @@
+/* Reset & Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #551915;
+    color: #ffffff;
+}
+
+/* Base Section Block Layout */
+.section-block {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 8%;
+}
+
+/* SECTION 1: HERO */
+.section-hero {
+    background-image: url('../assets/rudeus halaman 1.webp');
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+
+.navbar-pill {
+    width: 500px;
+    max-width: 90%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border-radius: 50px;
+    padding: 10px 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    margin: 10px auto 0 auto;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-icon-admin {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #3b110e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b110e;
+    transition: 0.2s;
+}
+
+.nav-icon-admin:hover {
+    background-color: #3b110e;
+    color: #fff;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #3b110e;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover {
+    color: #d35400;
+}
+
+.hero-text-container {
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.porto-title {
+    font-size: clamp(70px, 9vw, 120px);
+    font-weight: 900;
+    line-height: 0.95;
+    color: #3b110e;
+    margin-bottom: 15px;
+}
+
+.name-divider {
+    width: 220px;
+    height: 4px;
+    background-color: #3b110e;
+    margin-bottom: 15px;
+}
+
+.name-subtitle {
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: 800;
+    color: #3b110e;
+}
+
+/* SECTION 2: TENTANG */
+.section-about {
+    background-color: #551915;
+    height: auto;
+}
+
+.slide2-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.about-image img {
+    width: 300px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-content {
+    flex: 1;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.about-content p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #f0f0f0;
+}
+
+/* Tombol Interaktif "About Me" */
+.about-me-btn {
+    display: inline-block;
+    background: #41100e;
+    color: #ffffff;
+    padding: 8px 22px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.about-me-btn:hover {
+    background: #d35400;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(211, 84, 0, 0.4);
+    border-color: transparent;
+}
+
+.skill-heading {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.skill-box {
+    background: #41100e;
+    padding: 14px 20px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-box img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.skill-box span {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* SECTION 3: PENGALAMAN (Digeser ke Kiri agar Tidak Menutupi Karakter) */
+.section-experience {
+    background-image: url('../assets/rudeus halaman 3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    align-items: flex-start;
+    padding-left: 6%;
+}
+
+.experience-wrapper {
+    background: rgba(70, 19, 16, 0.92);
+    padding: 35px;
+    border-radius: 20px;
+    max-width: 780px;
+    width: 100%;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 50px;
+}
+
+.exp-category-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #f4d03f;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.exp-list {
+    list-style-type: disc;
+    padding-left: 18px;
+}
+
+.exp-list li {
+    font-size: 12.5px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    color: #e0e0e0;
+}
+
+.exp-list li strong {
+    color: #ffffff;
+}
+
+/* SECTION 4: PROYEK */
+.section-projects {
+    background-image: url('../assets/rudeus halaman 2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: auto;
+}
+
+.main-project-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.project-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.project-card {
+    background: #ffffff;
+    color: #333;
+    padding: 22px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.project-card p {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.btn-sub {
+    display: inline-block;
+    background: #d35400;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    transition: background 0.2s;
+}
+
+.btn-sub:hover {
+    background: #e67e22;
+}
+
+/* SECTION 5: KONTAK & SOSIAL MEDIA (Ringkas, Proporsional) */
+.section-contact {
+    background-color: #551915;
+    height: auto;
+    min-height: auto;
+    padding: 60px 8% 70px 8%;
+}
+
+.social-footer-container {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(70, 19, 16, 0.95);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-grid-custom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+
+.social-btn {
+    background: #d35400;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    background: #e67e22;
+}
+
+.footer-bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #ddd;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 15px;
+}
+
+.watermark-text {
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #f4d03f;
+}
+
+/* =========================================================
+   RESPONSIVE MOBILE & TABLET - HALAMAN BERANDA
+   ========================================================= */
+@media (max-width: 992px) {
+    .project-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .slide2-container {
+        gap: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-block {
+        padding: 65px 6%;
+        min-height: auto;
+    }
+
+    /* Navbar Mobile */
+    .navbar-pill {
+        width: 100%;
+        max-width: 100%;
+        padding: 8px 14px;
+    }
+
+    .nav-icon-admin {
+        width: 32px;
+        height: 32px;
+    }
+
+    .nav-menu {
+        gap: 12px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    /* Hero Mobile */
+    .section-hero {
+        min-height: 85vh;
+        justify-content: flex-start;
+        padding-top: 15px;
+    }
+
+    .hero-text-container {
+        margin-top: 55px;
+    }
+
+    .porto-title {
+        font-size: 54px;
+    }
+
+    .name-divider {
+        width: 140px;
+    }
+
+    .name-subtitle {
+        font-size: 15px;
+    }
+
+    /* Profil Singkat & Foto Mobile */
+    .slide2-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .about-image img {
+        width: 210px;
+        height: 270px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    /* Pengalaman Mobile */
+    .section-experience {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .experience-wrapper {
+        padding: 25px 20px;
+        margin-top: 20px;
+    }
+
+    /* Project Showcase Mobile (1 Kolom) */
+    .project-grid-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Kontak & Footer Mobile */
+    .section-contact {
+        padding: 45px 6% 55px 6%;
+    }
+
+    .social-footer-container {
+        padding: 25px 18px;
+    }
+
+    .social-grid-custom {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .footer-bottom-bar {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+}

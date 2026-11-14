@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang & Pengalaman - Aditiya Ravi Hendrawan</title>
+    <!-- Google Font Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- CSS Khusus Halaman About -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+</head>
+<body>
+
+    <div class="about-container">
+        <h1 class="about-title">TENTANG SAYA & PENGALAMAN</h1>
+        
+        <!-- Paragraf Pembuka (Bisa diedit dari Dashboard Admin) -->
+        <p class="about-desc" style="white-space: pre-line;">{{ konten.about_intro or 'Halo! Saya Aditiya Ravi Hendrawan, mahasiswa semester 3 Teknik Informatika di Universitas Nahdlatul Ulama Yogyakarta, sekaligus seorang freelancer di bidang Desain Grafis, UI/UX, dan Web Development. Ketertarikan saya pada dunia visual sudah tumbuh sejak bangku SMA, yang kemudian berkembang menjadi karier profesional.' }}</p>
+
+        <!-- Pengalaman SMA -->
+        <div class="exp-category-title">SMA NEGERI 1 SENTOLO 2020 - 2023</div>
+        <p class="about-desc" style="white-space: pre-line;">{{ konten.pengalaman_sma or '• Koordinator Bidang Pengawasan - MPK Adisatya Kamandaka (2021-2022)\n• Anggota Syiar dan Dakwah - Rohis SMAN 1 Sentolo (2021-2022)\n• Dewan Ambalan - SMAN 1 Sentolo (2021-2022)\n• Koordinator Multimedia - Forkom OSIS Kulon Progo (2020-2022)' }}</p>
+
+        <!-- Pengalaman Kerja -->
+        <div class="exp-category-title">OPERATOR DESAIN VOOKUS DIGITAL PRINTING (NOVEMBER 2023 - JANUARI 2025)</div>
+        <p class="about-desc" style="white-space: pre-line;">{{ konten.pengalaman_kerja or '• Operator Desain - Vookus Digital Printing (Nov 2023 - Jan 2025): Bekerja selama 15 bulan membuat desain dan merekomendasikan bahan cetak kepada 10+ pelanggan setiap harinya.' }}</p>
+
+        <!-- Pendidikan Kuliah -->
+        <div class="exp-category-title">INFORMATIKA UNIVERSITAS NAHDLATUL ULAMA YOGYAKARTA (NOVEMBER 2025 - SEKARANG)</div>
+        <p class="about-desc" style="white-space: pre-line;">{{ konten.pengalaman_kuliah or '• Mahasiswa Informatika - Universitas Nahdlatul Ulama Yogyakarta (Nov 2025 - Sekarang): Aktif menempuh studi sarjana semester 3.' }}</p>
+
+        <!-- Tombol Kembali ke Beranda -->
+        <div>
+            <a href="{{ url_for('index') }}" class="btn-back">← KEMBALI KE BERANDA</a>
+        </div>
+    </div>
+
+</body>
+</html>

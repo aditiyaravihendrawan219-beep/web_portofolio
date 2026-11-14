@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #551915;
+    color: #ffffff;
+    background-image: url('../assets/rudeus halaman 3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start; /* Menggeser kotak dari tengah ke sebelah kiri */
+    align-items: center;
+    padding: 40px 60px; /* Atur jarak dari tepi kiri layar (bisa ditambah jadi 80px atau 100px sesuai selera) */
+}
+
+.about-container {
+    max-width: 850px;
+    width: 100%;
+    background: rgba(70, 19, 16, 0.94);
+    backdrop-filter: blur(10px);
+    padding: 45px;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-title {
+    font-size: 28px;
+    font-weight: 900;
+    color: #f4d03f;
+    margin-bottom: 25px;
+    border-bottom: 2px solid rgba(244, 208, 63, 0.3);
+    padding-bottom: 12px;
+}
+
+.about-desc {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.exp-category-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #f4d03f;
+    margin: 25px 0 12px 0;
+}
+
+.exp-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.exp-list li {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    color: #e0e0e0;
+}
+
+.btn-back {
+    display: inline-block;
+    background: #d35400;
+    color: #ffffff;
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    margin-top: 30px;
+    transition: all 0.2s ease;
+}
+
+.btn-back:hover {
+    background: #e67e22;
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   RESPONSIVE MOBILE - HALAMAN ABOUT
+   ========================================================= */
+@media (max-width: 768px) {
+    body {
+        padding: 25px 15px;
+        align-items: flex-start;
+    }
+
+    .about-container {
+        padding: 28px 20px;
+        border-radius: 18px;
+    }
+
+    .about-title {
+        font-size: 21px;
+        margin-bottom: 18px;
+    }
+
+    .about-desc {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .exp-category-title {
+        font-size: 13px;
+    }
+
+    .btn-back {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+}
